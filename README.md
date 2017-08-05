@@ -41,11 +41,11 @@ python play.py
 
 ## Conda / Python 2
 
-Python 2.7
-conda create -n tensorflow-p2 python=2.7
-source activate tensorflow-p2
-conda install numpy pandas tensorflow jupyter notebook scipy scikit-learn nb_conda  h5py
-pip install -i https://pypi.anaconda.org/pypi/simple python-chess
-
+Python 2.7   
+conda create -n tensorflow-p2 python=2.7   
+source activate tensorflow-p2    
+conda install numpy pandas tensorflow jupyter notebook scipy scikit-learn nb_conda  h5py   
+pip install -i https://pypi.anaconda.org/pypi/simple python-chess    
+    
 
 
