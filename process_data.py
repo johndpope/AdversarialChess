@@ -69,6 +69,9 @@ def gen_board_pair_data(infile, outfile):
 		move_total = 0
 		outcome = outcome_to_val[cur_game.headers['Result']]
 		to_play = 1
+		print cur_game
+		
+
 		# Loop through boards
 		while not node.is_end():
 			# Check if datasets need to be resized
@@ -158,14 +161,14 @@ def gen_player_data(infile, outfile, player_name):
 	[d.resize(size=line_num, axis=0) for d in
 		[f_boards, s_boards, p_color]]
 	out.close()
-	pickle.dump(full_boards, open("../Data/full_boards.pkl", "wb"))
+	pickle.dump(full_boards, open("full_boards.pkl", "wb"))
 	
 
 def main():
-	datafile = '../Data/ficsgamesdb_2015_standard2000_nomovetimes_1429742.pgn'
-	playerfile = '../Data/Tal.pgn'
-	gen_board_pair_data(datafile, '../Data/training_data')
-	gen_player_data(playerfile, '../Data/player_data', 'Tal')
+	datafile = 'ficsgamesdb_2015_standard2000_nomovetimes_1429742.pgn'
+	playerfile = 'Tal.pgn'
+	gen_board_pair_data(datafile, 'training_data')
+	gen_player_data(playerfile, 'player_data', 'Tal')
 
 if __name__ == '__main__':
 	main()		
